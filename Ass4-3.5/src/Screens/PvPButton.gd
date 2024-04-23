@@ -8,4 +8,4 @@ func _on_button_up():
 	if !vs_computer:
 		get_tree().change_scene("res://src/Screens/Board-PVP.tscn")
 	else:
-		get_tree().change_scene("res://src/Screens/Board.tscn")
+		get_tree().change_scene("res://src/Screens/Difficulty.tscn")

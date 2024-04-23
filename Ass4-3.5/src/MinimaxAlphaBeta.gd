@@ -6,8 +6,14 @@ extends Node
 var stats = {}
 var visited_nodes: = 0
 var vs_computer: = true
+var easy_mode := false
 
+var rng = RandomNumberGenerator.new()
 # functions
+
+func _ready():
+	rng.randomize()
+
 func alpha_beta_search(state: Model, depth: int, alpha, beta, is_max: bool) -> Array:
 	visited_nodes += 1
 	if state.is_game_over() or depth == 0:
@@ -37,8 +43,15 @@ func alpha_beta_search(state: Model, depth: int, alpha, beta, is_max: bool) -> A
 	return best_value
 
 func move(state: Model, player: bool) -> int:
+	var move:int
 	var start_time: = OS.get_ticks_msec()
-	var move: int = alpha_beta_search(state, get_next_moves(state).size(), -INF, INF, player)[0]
+	if !easy_mode:
+		move = alpha_beta_search(state, get_next_moves(state).size(), -INF, INF, player)[0]  
+	else:
+		var emp := state.get_empty_tiles()
+		var rand_index:int = randi() % emp.size()
+		move = emp[rand_index]
+#		rng.randi_range(0, 8)
 	print_stats(start_time)
 	return move
 

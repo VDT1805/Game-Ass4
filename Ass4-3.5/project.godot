@@ -56,6 +56,8 @@ enabled=PoolStringArray( "res://addons/multirun/plugin.cfg" )
 [global]
 
 debug=false
+window=false
+windows=false
 
 [input]
 

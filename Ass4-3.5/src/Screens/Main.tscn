@@ -17,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 488, 423 )
+position = Vector2( 455, 423 )
 texture = ExtResource( 3 )
 
 [node name="Title" type="Label" parent="."]

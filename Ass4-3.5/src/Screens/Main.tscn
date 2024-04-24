@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://asset/Montserrat-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://src/Screens/PvPButton.gd" type="Script" id=2]
+[ext_resource path="res://asset/background.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -15,6 +16,10 @@ font_data = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 488, 423 )
+texture = ExtResource( 3 )
+
 [node name="Title" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
@@ -23,6 +28,7 @@ margin_top = 79.803
 margin_right = 186.0
 margin_bottom = 158.803
 grow_horizontal = 2
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Tic Tac Toe"
 align = 1

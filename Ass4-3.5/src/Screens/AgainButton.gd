@@ -1,8 +1,6 @@
-extends Node
+extends Button
 
 
-var myclient: String
-var winner:String
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

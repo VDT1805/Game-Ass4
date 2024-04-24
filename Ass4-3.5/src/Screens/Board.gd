@@ -118,11 +118,14 @@ func get_score() -> int:
 func end_game(value: int) -> void:
 	if value == 1:
 		print("X win!!")
+		Singleton.winner = "X win!!"
 	elif value == -1:
 		print("O win!!")
+		Singleton.winner = "O win!!"
 	else: # value == 0
 		print("It's a tie!")
-	get_tree().change_scene("res://src/Screens/Main.tscn")
+		Singleton.winner = "It's a tie!"
+	get_tree().change_scene("res://src/Screens/Result.tscn")
 
 
 #signal functions

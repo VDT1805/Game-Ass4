@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Screens/Board.gd" type="Script" id=1]
 [ext_resource path="res://asset/grid.png" type="Texture" id=2]
 [ext_resource path="res://src/Cell.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Screens/GUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://asset/background.jpg" type="Texture" id=5]
 
 [node name="Board" type="Node2D"]
 position = Vector2( 211.171, 0 )
@@ -11,6 +12,10 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 440.829, 442 )
+texture = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.38657, 1.38657 )

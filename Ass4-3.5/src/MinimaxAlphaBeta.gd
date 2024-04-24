@@ -49,7 +49,7 @@ func move(state: Model, player: bool) -> int:
 		move = alpha_beta_search(state, get_next_moves(state).size(), -INF, INF, player)[0]  
 	else:
 		var emp := state.get_empty_tiles()
-		var rand_index:int = randi() % emp.size()
+		var rand_index:int = randi() % emp.size() 
 		move = emp[rand_index]
 #		rng.randi_range(0, 8)
 	print_stats(start_time)

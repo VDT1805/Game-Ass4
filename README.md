@@ -1,1 +1,1 @@
-Tic-tac-toe using Minimax Algorithm and support Multiplayer
+# Tic-tac-toe using Minimax Algorithm and support Multiplayer
